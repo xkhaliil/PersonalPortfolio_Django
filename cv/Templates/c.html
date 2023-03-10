@@ -1,0 +1,45 @@
+<html>
+{% load static %}
+
+<head>
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+
+<body>
+     <!--Navbar-->
+    
+     {% include "navBar.html" %}
+   <br>
+   <br>
+
+     <!--Fin Navbar-->
+    <div class="container">
+        <div class="card mb-6">
+            <div class="card-body">
+                <h3 style="color: brown;"><i><center>Liste des Compétences</center></i></FONT></h3>
+                <center><table border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th><center>Nom de Compétence</center></th>
+                            <th><center>Niveau de Compétence</center></th>
+                            <th><center>Genre</center></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for c in competence %}
+                        <tr>
+                            <td style="color: brown;">{{ c.id }}</td>
+                            <td>{{ c.nomCompetence }}</td>
+                            <td>{{ c.niveauCompetence }}</td>
+                            <td>{{ c.genre }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                </center>
+</body>
+
+</html>

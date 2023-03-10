@@ -1,0 +1,84 @@
+  <style>
+    /* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #cbbcb1;
+}
+
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 2px;
+}
+  </style>
+  <header>
+    <!-- Navbar -->
+    <nav  class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0" style="background-color: rgba(244, 254, 98, 0.434);">
+      <div class="container" >
+        <a class="navbar-brand"  href="{% url 'f' %}"><span style="color: #5e9693;">Khalil</span><span style="color: rgb(0, 0, 0);">Ltaief</span></a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a  class="nav-link" href="{% url 'f' %}">Diplomes et Formations</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link" href="{% url 'genres' %}">Genre de Formations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin">Administration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'disconnect' %}">{{ request.session.username }}     Déconnexion</a>
+            </li>
+            
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    
+                </li> 
+            </ul>
+           
+           
+           
+         
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+  
+    <!--Section: Design Block-->
+    <section>
+      <br>
+      <br>
+      <!-- Intro -->
+      <!-- <div id="intro" class="bg-image vh-100" style="
+            background-image: url('https://mdbootstrap.com/img/Photos/new-templates/psychologist/img1.jpg');
+          ">
+        <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);"></div>
+      </div> -->
+      <!-- Intro -->
+    </section>
+    <!--Section: Design Block-->
+  </header>

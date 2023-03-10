@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+<head>
+<title>Modification</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+</head>
+<body>
+{% include "navBar2.html" %}
+<h1><center>Modifier</center></h1>
+<form action="updateG_action/{{ gen.id }}" method="post">
+{% csrf_token %}
+<div class="col-sm-4 col-md-6 col-lg-4" >
+<label>nom Genre</label>
+
+<input name="nomGenre" value="{{ gen.nomGenre }}" class="form-control"></td>
+
+</div>
+<div class="col-sm-4 col-md-6 col-lg-4">
+<label>description Genre </label>
+<input name="descriptionGenre" value="{{  gen.descriptionGenre }}"class="form-control">
+</div>
+<div class="col-sm-4 col-md-6 col-lg-4">
+<br><input type="submit" value="Modifier" class="btn btn-success">
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+    {% load static %}
+
+<head>
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <!--Navbar-->
+    
+    {% include "navBar2.html" %}
+   <br>
+   <br>
+    <p align="right">
+        <a href="addG/" class="btn btn-primary">Ajouter</a>
+        </p>
+    <!--Fin Navbar-->
+    <div class="container">
+        <div class="card mb-6">
+            <div class="card-body">
+                <h3><i><center>Liste des Types de Formations</center></i></FONT></h3>
+                <center>
+                <table border="1" >
+                    <thead>
+                        <tr>
+                            <th><center>ID</center></th>
+                            <th><center>Nom de Formation</center></th>
+                            <th><center>Description</center></th>
+                            <th><center>Supprimer</center></th>
+                            <th><center>Modifier</center></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for g in gen %}
+                        <tr>
+                            <td>{{ g.id }}</td>
+                            <td>{{ g.nomGenre }}</td>
+                            <td>{{ g.descriptionGenre }}</td>
+                            <td><a href="deleteG/{{ g.id }} "onclick="return confirm('vous ete sur ?')"> supprimer </a></td>
+                            <td><a href="updateG/{{ g.id }}">modifier</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table></center>
+</body>
+</html>

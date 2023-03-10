@@ -1,0 +1,40 @@
+<html>
+{% load static %}
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+     <!--Navbar-->
+    
+     {% include "navBar.html" %}
+   <br>
+   <br>
+     <!--Fin Navbar-->
+    <div class="container">
+        <div class="card mb-6">
+            <div class="card-body">
+                <h3 style="color: brown;"><i><center>les Diplomes et les Formations</center></i></FONT></h3>
+                <center><table border="1">
+                    <thead>
+                        <tr style="color: brown;">
+                            <th>NUMERO</th>
+                            <th>DESC</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for d in diplome %}
+                        <tr>
+                            <td style="color:brown;">{{ d.id }}</td>
+                            <td>{{ d.nomDiplome }}</td>
+                            <td>{{ d.dateDiplome }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table></center>
+</body>
+
+</html>
